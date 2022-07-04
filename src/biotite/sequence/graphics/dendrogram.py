@@ -84,7 +84,7 @@ def plot_dendrogram(axes, tree, orientation="left", use_distances=True,
                 for child, child_distance in zip(children, child_distances)
             ]
             # Position of this node is in the center of the child nodes
-            center_pos = sum(child_pos) / len(child_pos)
+            center_pos = np.mean(child_pos)
             if orientation in ["left", "right"]:
                 # Line connecting the childs
                 axes.plot(
